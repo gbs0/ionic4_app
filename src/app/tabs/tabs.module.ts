@@ -21,7 +21,7 @@ import { HomePageModule } from '../home/home.module';
     HomePageModule,
     AboutPageModule,
     ContactPageModule,
-    NewsPage
+    NewsPageModule
   ],
   declarations: [TabsPage]
 })
