@@ -18,9 +18,9 @@ import { NewsPageModule } from '../news/news.module';
     CommonModule,
     FormsModule,
     TabsPageRoutingModule,
+    NewsPageModule
     AboutPageModule,
     ContactPageModule,
-    NewsPageModule
   ],
   declarations: [TabsPage]
 })
