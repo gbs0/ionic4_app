@@ -25,16 +25,28 @@
 > ```
 >   export class NewsService {
 >       constructor(private http: HttpClient) { }
->       getData(url) {
->           return
+>       getData(url) { 
+>           return this.http.get(`${API_URL}/${url}&apiKey=${API_KEY}`);
 >       }
 >   }
 > ```
- 
-> #### Declare our constructor in app Page:
-> > In `In src > app > [your_page_folder] > [PAGE_NAME].page.ts`, use the following commands to pass our constructor in head file section.
+
+> #### Declare our service in app.module script:
+> > In `In src > app > app.module.ts`, use the following to import our NewsService in the head of the script, and after, import the `HttpClientModule` in `@NgModule` section:
 > ```
 >   import { HttpClientModule } from '@angular/common/http';
 >   ...
 >   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule]
+> ```
+ 
+> #### Declare our Service in app Page:
+> > In `In src > app > [your_page_folder] > [PAGE_NAME].page.ts`, use the following commands to pass our constructor in head file section and don't forget to declare OnInit in component section:
+> ```
+>   import { Component, OnInit } from '@angular/core';
+>   import { NewsService } from '../news.service';
+> ```
+
+> > After, make a contructor in our page class for log some data:
+> ```
+>   
 > ```
