@@ -15,13 +15,13 @@
 >   import { HttpClient } from '@angular/common/http';
 > ```
 > **Making a Constant**
-> In `[NAME].service.ts` file, declare a constant to hold the API url and the API key:
+> >In `[NAME].service.ts` file, declare a constant to hold the API url and the API key:
 > ```
 >   const API_URL = environment.apiUrl;
 >   const API_KEY = environment.apiKey;
 > ```
 > **Making the Constructors**
-> In `[NAME].service.ts` file, declare some functions below the class file, to get some data from API:
+> >In `[NAME].service.ts` file, declare some functions below the class file, to get some data from API:
 > ```
 >   export class NewsService {
 >       constructor(private http: HttpClient) { }
@@ -29,4 +29,12 @@
 >           return
 >       }
 >   }
-> ``` 
+> ```
+ 
+> #### Declare the API paths in enviroment file:
+> > In `In src > app > app.module.ts`, use the following commands to declare API credentials in `@NgModule` section.
+> ```
+>   import { HttpClientModule } from '@angular/common/http';
+>   ...
+>    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule]
+> ```
