@@ -48,5 +48,13 @@
 
 > > After, make a contructor in our page class for log some data:
 > ```
->   
+>   export class HomePage implements OnInit {
+>
+    constructor(private newsService:NewsService) { }
+>
+>   ngOnInit(){
+>      this.newsService.getData('top-headlines?country=br')
+>     .subscribe(data => {console.log(data);})
+>    }
+>}
 > ```

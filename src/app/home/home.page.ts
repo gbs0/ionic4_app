@@ -7,11 +7,14 @@ import { NewsService } from '../news.service';
   styleUrls: ['home.page.scss']
 })
 export class HomePage implements OnInit {
-
+	// Noticias que serão exibidas
+	articles: any;
 	constructor(private newsService:NewsService) { }
 
 	ngOnInit(){
 	  this.newsService.getData('top-headlines?country=br')
-	  .subscribe(data => {console.log(data);})
+	  .subscribe(data => {console.log(data);
+	  	this.articles = data;
+	  })
 	}
 }
