@@ -31,8 +31,8 @@
 >   }
 > ```
  
-> #### Declare the API params in enviroment file:
-> > In `In src > app > app.module.ts`, use the following commands to declare API credentials in `@NgModule` section.
+> #### Declare our constructor in app Page:
+> > In `In src > app > [your_page_folder] > [PAGE_NAME].page.ts`, use the following commands to declare API credentials in `@NgModule` section.
 > ```
 >   import { HttpClientModule } from '@angular/common/http';
 >   ...
