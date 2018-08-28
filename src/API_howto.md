@@ -31,10 +31,10 @@
 >   }
 > ```
  
-> #### Declare the API paths in enviroment file:
+> #### Declare the API params in enviroment file:
 > > In `In src > app > app.module.ts`, use the following commands to declare API credentials in `@NgModule` section.
 > ```
 >   import { HttpClientModule } from '@angular/common/http';
 >   ...
->    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule]
+>   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule]
 > ```
