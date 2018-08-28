@@ -11,16 +11,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var environment_1 = require("../environments/environment");
+var http_1 = require("@angular/common/http");
 var API_URL = environment_1.environment.apiUrl;
 var API_KEY = environment_1.environment.apiKey;
 var NewsService = /** @class */ (function () {
-    function NewsService() {
+    function NewsService(http) {
+        this.http = http;
     }
+    NewsService.prototype.getData = function (url) {
+        return this.http.get(API_URL + "/" + url + "&apiKey=" + API_KEY);
+    };
     NewsService = __decorate([
         core_1.Injectable({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [http_1.HttpClient])
     ], NewsService);
     return NewsService;
 }());

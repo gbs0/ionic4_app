@@ -14,6 +14,7 @@ var ngx_1 = require("@ionic-native/splash-screen/ngx");
 var ngx_2 = require("@ionic-native/status-bar/ngx");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
+var http_1 = require("@angular/common/http");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -21,7 +22,7 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             declarations: [app_component_1.AppComponent],
             entryComponents: [],
-            imports: [platform_browser_1.BrowserModule, angular_1.IonicModule.forRoot(), app_routing_module_1.AppRoutingModule],
+            imports: [platform_browser_1.BrowserModule, angular_1.IonicModule.forRoot(), app_routing_module_1.AppRoutingModule, http_1.HttpClientModule],
             providers: [
                 ngx_2.StatusBar,
                 ngx_1.SplashScreen,

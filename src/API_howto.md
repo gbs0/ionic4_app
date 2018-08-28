@@ -32,7 +32,7 @@
 > ```
  
 > #### Declare our constructor in app Page:
-> > In `In src > app > [your_page_folder] > [PAGE_NAME].page.ts`, use the following commands to declare API credentials in `@NgModule` section.
+> > In `In src > app > [your_page_folder] > [PAGE_NAME].page.ts`, use the following commands to pass our constructor in head file section.
 > ```
 >   import { HttpClientModule } from '@angular/common/http';
 >   ...
