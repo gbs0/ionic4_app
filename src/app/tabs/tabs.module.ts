@@ -9,8 +9,7 @@ import { TabsPageRoutingModule } from './tabs.router.module';
 import { TabsPage } from './tabs.page';
 import { ContactPageModule } from '../contact/contact.module';
 import { AboutPageModule } from '../about/about.module';
-import { NewsPageModule } from '../news/news.module';
-
+import { HomePageModule } from '../home/home.module';
 
 @NgModule({
   imports: [
@@ -18,9 +17,9 @@ import { NewsPageModule } from '../news/news.module';
     CommonModule,
     FormsModule,
     TabsPageRoutingModule,
-    NewsPageModule
+    HomePageModule,
     AboutPageModule,
-    ContactPageModule,
+    ContactPageModule
   ],
   declarations: [TabsPage]
 })
