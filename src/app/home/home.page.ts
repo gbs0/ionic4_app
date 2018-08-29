@@ -8,13 +8,13 @@ import { NewsService } from '../news.service';
 })
 export class HomePage implements OnInit {
 	// Noticias que serão exibidas
-	articles: any;
+	data: any;
 	constructor(private newsService:NewsService) { }
 
 	ngOnInit(){
 	  this.newsService.getData('top-headlines?country=br')
 	  .subscribe(data => {console.log(data);
-	  	this.articles = data;
+	  	this.data = data;
 	  })
 	}
 }

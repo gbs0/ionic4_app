@@ -5,8 +5,10 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
-  	<ion-img src=""></ion-img>
+  <!-- Initializing array operations for get data -->
+  <ion-card *ngFor="let article of data.articles">
+    	<!-- Interpoling src from API(?) -->
+    	<ion-img [src]="article.urlToImage"></ion-img>
 
   	<ion-card-content>
   		<ion-card-title>Hello Card</ion-card-title>

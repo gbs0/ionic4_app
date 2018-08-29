@@ -16,8 +16,12 @@ var HomePage = /** @class */ (function () {
         this.newsService = newsService;
     }
     HomePage.prototype.ngOnInit = function () {
+        var _this = this;
         this.newsService.getData('top-headlines?country=br')
-            .subscribe(function (data) { console.log(data); });
+            .subscribe(function (data) {
+            console.log(data);
+            _this.articles = data;
+        });
     };
     HomePage = __decorate([
         core_1.Component({
