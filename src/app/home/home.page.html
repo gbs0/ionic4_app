@@ -6,7 +6,7 @@
 
 <ion-content padding>
   <!-- Initializing array operations for get data -->
-  <ion-card *ngFor="let article of data?.articles">
+  <ion-card *ngFor="let article of data?.articles" (click)="onGoToNewsSinglePage()">
     	<!-- Interpoling src from API(?) -->
     	<ion-img [src]="article.urlToImage"></ion-img>
 
