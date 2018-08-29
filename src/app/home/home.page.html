@@ -8,7 +8,7 @@
   <!-- Initializing array operations for get data -->
   <ion-card *ngFor="let article of data?.articles" (click)="onGoToNewsSinglePage()">
     	<!-- Interpoling src from API(?) -->
-    	<ion-img [src]="article.urlToImage"></ion-img>
+    	<!-- <ion-img [src]="article.urlToImage"></ion-img> -->
 
   	<ion-card-content>
   		<!-- Importing params from API -->
@@ -16,4 +16,9 @@
   		<p>{{article.description}}</p>
   	</ion-card-content>
   </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="loadMoreNews($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubble" loadingText="load news.."></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
 </ion-content>
