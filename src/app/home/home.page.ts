@@ -10,7 +10,7 @@ export class HomePage implements OnInit {
 	// Noticias que serão exibidas
 	data: any;
 	page = 1;
-	
+
 	constructor(private newsService:NewsService) { }
 
 	ngOnInit(){

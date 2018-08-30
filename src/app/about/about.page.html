@@ -4,4 +4,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content padding>
+  <!-- Initializing array operations for get data -->
+  <ion-card *ngFor="let article of data?.articles" (click)="onGoToNewsSinglePage()">
+    	<!-- Interpoling src from API(?) -->
+    	<ion-img [src]="article.urlToImage"></ion-img>
+
+  	<ion-card-content>
+  		<!-- Importing params from API -->
+  		<ion-card-title>{{article.title}}</ion-card-title>
+  		<p>{{article.description}}</p>
+  	</ion-card-content>
+  </ion-card>
+  
+</ion-content>
