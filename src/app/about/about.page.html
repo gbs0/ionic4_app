@@ -6,7 +6,7 @@
 
 <ion-content padding>
   <!-- Initializing array operations for get data -->
-  <ion-card *ngFor="let article of data?.articles" (click)="onGoToNewsSinglePage()">
+  <ion-card *ngFor="let article of data?.articles">
     	<!-- Interpoling src from API(?) -->
     	<ion-img [src]="article.urlToImage"></ion-img>
 
@@ -16,5 +16,5 @@
   		<p>{{article.description}}</p>
   	</ion-card-content>
   </ion-card>
-  
+
 </ion-content>

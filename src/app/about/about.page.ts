@@ -17,13 +17,13 @@ export class AboutPage implements OnInit {
   // 	.subscribe(data => {console.log(data);
   // 		this.data = data;
 		// })
-		
+
 	  .subscribe(data => {
 	  	for (const article of data ['articles']) {
 	  		this.data.articles.push(article);
 	  	}
 	  	// event.target.complete();
-	  	// console.log(this.data);
+	  	console.log(this.data);
 
 	  });
 	}
