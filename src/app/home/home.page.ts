@@ -9,6 +9,8 @@ import { NewsService } from '../news.service';
 export class HomePage implements OnInit {
 	// Noticias que serão exibidas
 	data: any;
+	page = 1;
+	
 	constructor(private newsService:NewsService) { }
 
 	ngOnInit(){
@@ -17,4 +19,24 @@ export class HomePage implements OnInit {
 	  	this.data = data;
 	  })
 	}
+
+	loadMoreNews(event) {
+    this.page++;
+    console.log(event);
+    this.newsService
+      .getData(
+        `top-headlines?country=us&category=business&pageSize=5&page=${
+          this.page
+        }`
+      )
+      .subscribe(data => {
+        // console.log(data);
+        // this.data = data;
+        for (const article of data['articles']) {
+          this.data.articles.push(article);
+        }
+	        event.target.complete();
+	        console.log(this.data);
+      });
+  }
 }
