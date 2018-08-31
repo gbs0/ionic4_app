@@ -4,9 +4,12 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 export const environment = {
   production: false,
-  apiUrl: 'https://newsapi.org/v2/',
+  apiUrl: 'https://x.org/v2/',
   apiKey: 'e1767647b82f4f6899aa636fb18ca419'
+  punkyApi: 'https://api.punky.com/v2'
 };
+
+
 
 /*
  * In development mode, to ignore zone related error stack frames such as
